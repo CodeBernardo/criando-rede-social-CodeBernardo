@@ -1,0 +1,33 @@
+body { 
+  font-family: 'Inter';
+}
+
+.title1{
+  font-size: var(--font-size1);
+  font-weight: var(--font-weigth1);
+  line-height: var(--line-heigth1);
+}
+
+.title2{
+  font-size: var(--font-size2);
+  font-weight: var(--font-weigth2);
+  line-height: var(--line-heigth3);
+}
+
+.text1{
+  font-size: var(--font-size3);
+  font-weight: var(--font-weigth3);
+  line-height: var(--line-heigth2);
+}
+
+.text2{
+  font-size: var(--font-size4);
+  font-weight: var(--font-weigth3);
+  line-height: var(--line-heigth4);
+}
+
+.text3{
+  font-size: var(--font-size5);
+  font-weight: var(--font-weigth3);
+  line-height: var(--line-heigth4);
+}
