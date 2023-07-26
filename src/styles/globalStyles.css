@@ -1,29 +1,28 @@
 :root {
-
   /* Brand colors */
-  --brand-color1: #4263EB;
-  --brand-color2: #364FC7;
+  --brand-color1: #4263eb;
+  --brand-color2: #364fc7;
 
   /* Grey colors */
-  --grey-color1: #0A0C0D;
+  --grey-color1: #0a0c0d;
   --grey-color2: #212529;
   --grey-color3: #495057;
-  --grey-color4: #868E96;
-  --grey-color5: #DEE2E6;
-  --grey-color6: #F8F9FA
-  --grey-opacity-1: rgba(33, 37, 41, 0.5)
-  --whiteFixed: #FFFFFF
+  --grey-color4: #868e96;
+  --grey-color5: #dee2e6;
+  --grey-color6: #f8f9fa;
+  --grey-opacity-1: rgba(33, 37, 41, 0.5);
+  --whiteFixed: #ffffff;
 
   /* FeedBack Pallet */
-  --like-color: #D7443E;
-  
+  --like-color: #d7443e;
+
   /* Font Weigths */
-  -font-weigth1: 700;
-  -font-weigth2: 600;
-  -font-weigth3: 400;
-  
+  --font-weigth1: 700;
+  --font-weigth2: 600;
+  --font-weigth3: 400;
+
   /* Font Sizes */
-  --font-size1: 1.75rem,
+  --font-size1: 1.75rem;
   --font-size2: 1.25rem;
   --font-size3: 1rem;
   --font-size4: 0.875rem;
@@ -34,4 +33,11 @@
   --line-heigth2: 1.75rem;
   --line-heigth3: 1.5rem;
   --line-heigth4: 1rem;
+
+  /* Border Radious */
+  --radious-default: 3px;
+
+  /* Paddings */
+  --btn-padding1: 0.75rem;
+  --btn-padding2: 4px 8px;
 }

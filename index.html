@@ -31,12 +31,12 @@
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
-    <main class="content-Container">
+    <main class="main__container">
       <!-- ÁREA 1 (CRIAÇÃO DE POST E SUGESTÕES)-->
-      <section>
+      <section class="userSection__container">
         <!-- CRIAÇÃO DE UM NOVO POST -->
-        <section class="userSection">
-          <div class="userCard">
+        <section class="newPost__container">
+          <div class="userCard__container">
             <img src="./src/assets/img/user1.svg" alt="Samuel" class="userCard__img"/>
             <div class="userCard__info">
               <h2>Samuel Leão</h2>
@@ -45,7 +45,7 @@
           </div>
 
           <!-- FORM DE CRIAÇÃO DE UM NOVO POST -->
-          <form class="newPost">
+          <form>
             <input
               type="text"
               placeholder="Digite o título do post"
@@ -61,17 +61,17 @@
               required=""
               class="newPost__content"
             ></textarea>
-            <button type="submit" class="newPost__submit">Postar</button>
+            <button type="submit" class="newPost__btnSubmit">Postar</button>
           </form>
         </section>
 
         <!-- SUGESTÕES PARA SEGUIR -->
-        <section class="suggestions">
+        <section class="suggestions__container">
           <h2>Sugestões para você seguir</h2>
           <ul class="suggestions__list">
             <!-- SUGESTÃO 1 -->
             <li class="suggestions__item">
-              <div class="userCard">
+              <div class="userCard__container">
                 <img src="./src/assets/img/user2.svg" alt="Carlos Lima" class="userCard__img"  />
                 <div class="userCard__info">
                   <h2>Carlos Lima</h2>
@@ -82,7 +82,7 @@
             </li>
             <!-- SUGESTÃO 2 -->
             <li class="suggestions__item">
-              <div class="userCard">
+              <div class="userCard__container">
                 <img src="./src/assets/img/user3.svg" alt="Rafael Bertoldo" class="userCard__img" />
                 <div class="userCard__info">
                   <h2>Rafael Bertoldo</h2>
@@ -93,7 +93,7 @@
             </li>
             <!-- SUGESTÃO 3 -->
             <li class="suggestions__item">
-              <div class="userCard">
+              <div class="userCard__container">
                 <img src="./src/assets/img/user4.svg" alt="Júlia Martins" class="userCard__img" />
                 <div class="userCard__info">
                   <h2>Júlia Martins</h2>
@@ -107,11 +107,11 @@
       </section>
 
       <!-- ÁREA 2 (LISTAGEM DE POSTS) -->
-      <section class="feed">
+      <section class="feed__container">
         <h2 class="feed__title">Posts</h2>
         <!-- POST 1 -->
-        <article class="userPost">
-          <div class="userCard">
+        <article class="userPost__container">
+          <div class="userCard__container">
             <img src="./src/assets/img/user5.svg" alt="Iris Silva" class="userCard__img" />
             <div class="userCard__info">
               <h2>Iris Silva</h2>
@@ -134,9 +134,9 @@
             <button class="userPost__openBtn">Abrir Post</button>
             <div>
               <img
-                src="src/assets/img/gray-heart.svg"
+                src="./src/assets/img/heart-gray.svg"
                 alt="Empty Heart(Post not liked)"
-                class="userPost__like"
+                class="userPost__likeIcon"
               />
               <small class="userPost__likeCounter">25</small>
             </div>
@@ -144,8 +144,8 @@
         </article>
 
         <!-- POST 2 -->
-        <article class="userPost">
-          <div class="userCard">
+        <article class="userPost__container">
+          <div class="userCard__container">
             <img src="./src/assets/img/user6.svg" alt="Carla Maria" class="userCard__img" />
             <div class="userCard__info">
               <h2>Carla Maria</h2>
@@ -169,9 +169,9 @@
             <button class="userPost__openBtn">Abrir Post</button>
             <div>
               <img
-                src="src/assets/img/gray-heart.svg"
+                src="./src/assets/img/heart-gray.svg"
                 alt="Empty Heart(Post not liked)"
-                class="userPost__like"
+                class="userPost__likeIcon"
               />
               <smal class="userPost__likeCounter">19</smal>
             </div>
@@ -179,8 +179,8 @@
         </article>
 
         <!-- POST 3 -->
-        <article class="userPost">
-          <div class="userCard">
+        <article class="userPost__container">
+          <div class="userCard__container">
             <img src="./src/assets/img/user7.svg" alt="João Carvalho" class="userCard__img" />
             <div class="userCard__info">
               <h2>João Carvalho</h2>
@@ -206,9 +206,9 @@
             <button class="userPost__openBtn">Abrir Post</button>
             <div>
               <img
-                src="src/assets/img/gray-heart.svg"
+                src="./src/assets/img/heart-gray.svg"
                 alt="Empty Heart(Post not liked)"
-                class="userPost__like"
+                class="userPost__likeIcon"
               />
               <small class="userPost__likeCounter">8</small>
             </div>

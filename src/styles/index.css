@@ -1,0 +1,118 @@
+.userCard__img {
+  height: 3.125rem;
+}
+
+body {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.userSection__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+
+  padding: 0.93rem;
+
+  height: 40vh;
+}
+
+.newPost__container {
+  /* border: 1px solid; */
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.9375rem;
+
+  width: 65%;
+}
+
+.newPost__container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 0.93rem;
+}
+
+.suggestions__container {
+  width: 35%;
+}
+
+.userCard__container {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.newPost__btnSubmit {
+  width: fit-content;
+  height: fit-content;
+
+  background-color: var(--brand-color1);
+  color: var(--whiteFixed);
+
+  border: none;
+  border-radius: var(--radious-default);
+
+  padding: var(--btn-padding1);
+}
+
+.suggestions__followBtn {
+  width: fit-content;
+  height: fit-content;
+
+  background-color: var(--whiteFixed);
+  color: var(--grey-color1);
+
+  border: 1px solid var(--grey-color1);
+  border-radius: var(--radious-default);
+
+  padding: var(--btn-padding2);
+}
+
+.userPost__openBtn {
+  width: fit-content;
+  height: fit-content;
+
+  background-color: var(--grey-color1);
+  color: var(--whiteFixed);
+
+  border-radius: var(--radious-default);
+
+  padding: var(--btn-padding1);
+}
+
+.newPost__tittle,
+.newPost__content {
+  padding: 0.625rem;
+
+  width: 100%;
+
+  border: 1px solid var(--grey-color4);
+  border-radius: 3px;
+}
+
+.newPost__content {
+
+  height: 30%;
+  resize: none;
+}
+
+.suggestions__list {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 1.5rem;
+
+  gap: 1.5rem;
+}
+
+.suggestions__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* padding: 1.25rem 0; */
+}
