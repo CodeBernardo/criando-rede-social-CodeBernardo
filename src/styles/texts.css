@@ -1,6 +1,3 @@
-body {
-  font-family: "Inter";
-}
 
 /* classes provisorias de texto  */
 
@@ -31,13 +28,17 @@ body {
 .text2--bold {
   font-weight: var(--font-weigth2);
   font-size: var(--font-size4);
-
-
+  
+  
 .text3{
   font-weight: var(--font-weigth3);
   font-size: var(--font-size5);
   line-height: var(--line-heigth4);
 } */
+
+body {
+  font-family: "Inter";
+}
 
 .userCard__info h2 {
   font-weight: var(--font-weigth2);
