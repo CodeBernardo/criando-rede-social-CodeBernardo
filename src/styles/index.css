@@ -10,6 +10,7 @@ body {
 main {
   width: 90%;
   margin: 0 auto;
+  margin-top: 6.25rem;
 }
 
 .navBar {
@@ -23,7 +24,10 @@ main {
   height: 4.3rem;
   width: 100%;
   margin: 0 auto;
-  padding: 0 6rem;
+  padding: 0 4rem;
+
+  position: fixed;
+  top: 0;
 }
 
 .navBar__img {
@@ -68,7 +72,7 @@ main {
 .userCard__info {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.3rem;
 }
 
 .newPost__btnSubmit {
@@ -167,12 +171,20 @@ main {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+
+  margin-bottom: 4rem;
 }
 
 .userPost__container {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
+}
+
+.userPost__content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .openBtn__container {
