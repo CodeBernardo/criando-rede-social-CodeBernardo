@@ -1,36 +1,36 @@
 import { posts } from "./database.js";
 
+function createPostHeader(postInfo) {
+  const userCardContainer = createDiv("userCard__container");
+
+  const userImg = document.createElement("img");
+  userImg.classList.add("userCard__img");
+  userImg.src = postInfo.img;
+
+  const infoContainer = createDiv("userCard__info");
+
+  const userName = document.createElement("h2");
+  userName.innerText = postInfo.user;
+
+  const userStack = document.createElement("p");
+  userStack.innerText = postInfo.stack;
+
+  infoContainer.append(userName, userStack);
+
+  userCardContainer.append(userImg, infoContainer);
+
+  return userCardContainer;
+}
+
+function createDiv(className) {
+  const newDiv = document.createElement("div");
+  newDiv.classList.add(className);
+
+  return newDiv;
+}
+
 function renderPosts(postsArray) {
   const feedContainer = document.querySelector(".feed__container");
-
-  function createDiv(className) {
-    const newDiv = document.createElement("div");
-    newDiv.classList.add(className);
-
-    return newDiv;
-  }
-
-  function createPostHeader(postInfo) {
-    const userCardContainer = createDiv("userCard__container");
-
-    const userImg = document.createElement("img");
-    userImg.classList.add("userCard__img");
-    userImg.src = postInfo.img;
-
-    const infoContainer = createDiv("userCard__info");
-
-    const userName = document.createElement("h2");
-    userName.innerText = postInfo.user;
-
-    const userStack = document.createElement("p");
-    userStack.innerText = postInfo.stack;
-
-    infoContainer.append(userName, userStack);
-
-    userCardContainer.append(userImg, infoContainer);
-
-    return userCardContainer;
-  }
 
   for (let i = 0; i < postsArray.length; i++) {
     const newArticle = document.createElement("article");
@@ -54,12 +54,13 @@ function renderPosts(postsArray) {
 
     const openBtn = document.createElement("button");
     openBtn.classList.add("userPost__openBtn");
-    openBtn.innerText ='Abrir Post'
+    openBtn.id = postsArray[i].id;
+    openBtn.innerText = "Abrir Post";
 
     const interactionsContainer = createDiv("users_interactions");
 
     const likeIcon = document.createElement("img");
-    likeIcon.classList.add("userPost__likeIcon");
+    likeIcon.classList.add("userPost__likeIcon", "LikeIcon--notLiked");
     likeIcon.src = "./src/assets/img/heart-gray.svg";
 
     const likeCounter = document.createElement("small");
@@ -76,4 +77,55 @@ function renderPosts(postsArray) {
   }
 }
 
+function createPostModal(post) {
+  const postContainer = createDiv("userPost__container", "userPost__container--modal");
+
+  const modalPostHeader = createPostHeader(post);
+
+  const modalPostTitle = document.createElement("h2");
+  modalPostTitle.classList.add("userPost__title");
+  modalPostTitle.innerText = post.title;
+
+  const modalPostContent = document.createElement("p");
+  modalPostContent.classList.add("userPost__content", "userPost__content--modal");
+  modalPostContent.innerText = post.text;
+
+  const modalCloseButton = document.createElement("span");
+  modalCloseButton.classList.add("modal__closeBtn");
+  modalCloseButton.innerText = "X";
+
+  postContainer.append(
+    modalPostHeader,
+    modalPostTitle,
+    modalPostContent,
+    modalCloseButton
+  );
+
+  return postContainer;
+}
+
+function handlePostModal(array) {
+  const modalcontroller = document.querySelector(".modalPost__controller");
+  const postButons = document.querySelectorAll(".userPost__openBtn");
+  let postFound = {};
+
+  for (let i = 0; i < postButons.length; i++) {
+    postButons[i].addEventListener("click", (event) => {
+      for (let postId = 0; postId < array.length; postId++) {
+        if(array[postId].id == event.target.id) {
+          postFound = array[postId]
+          console.log(postFound)
+        }
+      }
+      modalcontroller.innerHTML = ''
+      const modalCard = createPostModal(postFound)
+
+      modalcontroller.appendChild(modalCard)
+
+      modalcontroller.showModal()
+    });
+  }
+}
+
 renderPosts(posts);
+handlePostModal(posts);
