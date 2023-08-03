@@ -140,4 +140,4 @@ function closeModal() {
 
 
 renderPosts(posts);
-handlePostModal(posts);
+handlePostModal(posts)
