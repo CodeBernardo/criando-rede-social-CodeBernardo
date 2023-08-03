@@ -1,46 +1,9 @@
-
-/* classes provisorias de texto  */
-
-/* .title1{
-  font-weight: var(--font-weigth1);
-  font-size: var(--font-size1);
-  line-height: var(--line-heigth1);
-}
-
-.title2{
-  font-weight: var(--font-weigth2);
-  font-size: var(--font-size2);
-  line-height: var(--line-heigth3);
-}
-
-.text1{
-  font-weight: var(--font-weigth3);
-  font-size: var(--font-size3);
-  line-height: var(--line-heigth2);
-}
-
-.text2{
-  font-weight: var(--font-weigth3);
-  font-size: var(--font-size4);
-  line-height: var(--line-heigth4);
-}
-
-.text2--bold {
-  font-weight: var(--font-weigth2);
-  font-size: var(--font-size4);
-  
-  
-.text3{
-  font-weight: var(--font-weigth3);
-  font-size: var(--font-size5);
-  line-height: var(--line-heigth4);
-} */
-
 body {
   font-family: "Inter";
 }
 
-.userCard__info h2 {
+.userCard__info h2,
+.suggestions__container h2 {
   font-weight: var(--font-weigth2);
   font-size: var(--font-size2);
   line-height: var(--line-heigth3);
@@ -53,28 +16,11 @@ body {
   color: var(--grey-color2);
 }
 
-.suggestions__container h2 {
-  font-weight: var(--font-weigth2);
-  font-size: var(--font-size2);
-  line-height: var(--line-heigth3);
-}
-
-.feed__title {
-  font-weight: var(--font-weigth1);
-  font-size: var(--font-size1);
-  line-height: var(--line-heigth1);
-}
-
+.feed__title,
 .userPost__title {
   font-weight: var(--font-weigth1);
   font-size: var(--font-size1);
   line-height: var(--line-heigth1);
-}
-
-.userPost__content {
-  font-weight: var(--font-weigth3);
-  font-size: var(--font-size3);
-  line-height: var(--line-heigth2);
 }
 
 button {
@@ -82,7 +28,9 @@ button {
   font-size: var(--font-size4);
 }
 
-.newPost__tittle, .newPost__content {
+.newPost__tittle,
+.newPost__content,
+.userPost__content {
   font-weight: var(--font-weigth3);
   font-size: var(--font-size3);
   line-height: var(--line-heigth2);

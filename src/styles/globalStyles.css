@@ -1,9 +1,7 @@
 :root {
-  /* Brand colors */
   --brand-color1: #4263eb;
   --brand-color2: #364fc7;
 
-  /* Grey colors */
   --grey-color1: #0a0c0d;
   --grey-color2: #212529;
   --grey-color3: #495057;
@@ -13,31 +11,25 @@
   --grey-opacity-1: #21252980;
   --whiteFixed: #ffffff;
 
-  /* FeedBack Pallet */
   --like-color: #d7443e;
 
-  /* Font Weigths */
   --font-weigth1: 700;
   --font-weigth2: 600;
   --font-weigth3: 400;
 
-  /* Font Sizes */
   --font-size1: 1.75rem;
   --font-size2: 1.25rem;
   --font-size3: 1rem;
   --font-size4: 0.875rem;
   --font-size5: 0.75rem;
 
-  /* Line Heigths */
   --line-heigth1: 2.5rem;
   --line-heigth2: 1.75rem;
   --line-heigth3: 1.5rem;
   --line-heigth4: 1rem;
 
-  /* Border Radious */
   --radious-default: 3px;
 
-  /* Paddings */
   --btn-padding1: 0.75rem;
-  --btn-padding2: 4px 8px;
+  --btn-padding2: 0.25rem 0.5rem;
 }
