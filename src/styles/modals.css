@@ -42,6 +42,10 @@ dialog::backdrop {
     scale: 0;
   }
 
+  70% {
+    scale: 1.1;
+  }
+
   100% {
     scale: 1;
   }
