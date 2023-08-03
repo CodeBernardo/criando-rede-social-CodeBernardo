@@ -33,6 +33,16 @@
   .feed__container {
     width: 95%;
   }
+
+  dialog{
+    width: 80%;
+  }
+
+  .modal__closeBtn {
+    right: 1.25rem;
+    top: 0.9375rem;
+  }
+
 }
 
 @media(max-width: 768px) {
