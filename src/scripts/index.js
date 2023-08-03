@@ -114,18 +114,30 @@ function handlePostModal(array) {
       for (let postId = 0; postId < array.length; postId++) {
         if(array[postId].id == event.target.id) {
           postFound = array[postId]
-          console.log(postFound)
         }
       }
       modalcontroller.innerHTML = ''
+
       const modalCard = createPostModal(postFound)
 
       modalcontroller.appendChild(modalCard)
 
       modalcontroller.showModal()
+
+      closeModal()
     });
   }
 }
+
+function closeModal() {
+  const modalController = document.querySelector('.modalPost__controller')
+  const closeBtn = document.querySelector('.modal__closeBtn')
+  
+  closeBtn.addEventListener('click', () => {
+    modalController.close()
+  })
+}
+
 
 renderPosts(posts);
 handlePostModal(posts);

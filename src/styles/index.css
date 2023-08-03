@@ -199,6 +199,10 @@ main {
   gap: 8px;
 }
 
+.userPost__likeIcon{
+  cursor: pointer;
+}
+
 dialog {
   width: 90%;
   border: none;

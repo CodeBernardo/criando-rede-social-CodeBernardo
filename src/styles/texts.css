@@ -26,6 +26,7 @@ body {
 button {
   font-weight: var(--font-weigth2);
   font-size: var(--font-size4);
+  cursor: pointer;
 }
 
 .newPost__tittle,
