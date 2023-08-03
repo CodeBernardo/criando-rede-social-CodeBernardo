@@ -66,9 +66,9 @@
     margin-bottom: 1.25rem;
   }
 
-  /* .suggestions__list {
+  .suggestions__list {
     overflow-x: scroll;
-  } */
+  }
 
   .suggestions__item {
     min-width: fit-content;
