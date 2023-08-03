@@ -18,7 +18,7 @@ dialog::backdrop {
 }
 
 .userPost__content--modal  p {
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .userPost__container--modal {
