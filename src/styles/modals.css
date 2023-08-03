@@ -6,7 +6,7 @@ dialog {
   border-radius: var(--radious-modal);
   box-shadow: 5px 5px 12px 0px rgba(28, 28, 28, 0.75);
 
-  /* animation: modalIn 400ms; */
+  animation: modalIn 400ms;
 }
 
 dialog::backdrop {
@@ -37,7 +37,7 @@ dialog::backdrop {
   cursor: pointer;
 }
 
-/* @keyframes modalIn {
+@keyframes modalIn {
   0% {
     scale: 0;
   }
@@ -45,4 +45,4 @@ dialog::backdrop {
   100% {
     scale: 1;
   }
-} */
+}
