@@ -1,5 +1,4 @@
-@media(max-width: 1025px) {
-
+@media (max-width: 1025px) {
   .navBar {
     padding: 0 3rem;
   }
@@ -34,33 +33,31 @@
     width: 95%;
   }
 
-  dialog{
-    width: 80%;
+  dialog {
+    width: 70%;
   }
 
   .modal__closeBtn {
     right: 1.25rem;
     top: 0.9375rem;
   }
-
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .navBar {
     padding: 0 2rem;
   }
-  
+
   .suggestions__list {
     overflow-x: scroll;
   }
 
   .suggestions__item {
-    min-width: fit-content
+    min-width: fit-content;
   }
 }
 
-@media(max-width: 425px) {
-
+@media (max-width: 425px) {
   .navBar {
     padding: 0 1rem;
   }
@@ -74,6 +71,10 @@
   }
 
   .suggestions__item {
-    min-width: fit-content
+    min-width: fit-content;
+  }
+
+  dialog {
+    width: 90%;
   }
 }

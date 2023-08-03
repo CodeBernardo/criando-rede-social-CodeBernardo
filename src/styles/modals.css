@@ -4,7 +4,9 @@ dialog {
   box-sizing: border-box;
   padding: 1.5625rem;
   border-radius: var(--radious-modal);
-  box-shadow: 5px 5px 12px 0px rgba(28,28,28,0.75);
+  box-shadow: 5px 5px 12px 0px rgba(28, 28, 28, 0.75);
+
+  animation: modalIn 400ms;
 }
 
 dialog::backdrop {
@@ -12,13 +14,13 @@ dialog::backdrop {
 }
 
 .userPost__content--modal {
-  white-space:unset;
+  white-space: unset;
   overflow: unset;
-  text-overflow:unset;
+  text-overflow: unset;
 }
 
-.userPost__content--modal  p {
-  /* overflow: scroll; */
+.userPost__content--modal p {
+  overflow: scroll;
 }
 
 .userPost__container--modal {
@@ -33,4 +35,14 @@ dialog::backdrop {
   font-size: 1.5625rem;
   color: var(--grey-color3);
   cursor: pointer;
+}
+
+@keyframes modalIn {
+  0% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 1;
+  }
 }
