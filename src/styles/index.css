@@ -110,11 +110,11 @@ main {
   color: var(--brand-color2);
 }
 
-.suggestions__followBtn:focus {
+/* .suggestions__followBtn:focus {
   background-color: var(--brand-color2);
   color: var(--whiteFixed);
   border: none;
-}
+} */
 
 .userPost__openBtn {
   width: fit-content;
@@ -202,5 +202,25 @@ main {
   cursor: pointer;
 }
 
+.LikeIcon--Liked {
+  animation: liked 300ms;
+}
 
+.suggestion--following {
+  background-color: var(--brand-color1);
+  color: var(--whiteFixed);
+}
 
+@keyframes liked {
+  0% {
+    scale: 0;
+  }
+
+  50% {
+    scale: 1.1;
+  }
+
+  100% {
+    scale: 1;
+  }
+}

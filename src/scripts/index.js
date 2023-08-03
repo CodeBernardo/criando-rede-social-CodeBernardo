@@ -63,6 +63,30 @@ function renderPosts(postsArray) {
     likeIcon.classList.add("userPost__likeIcon", "LikeIcon--notLiked");
     likeIcon.src = "./src/assets/img/heart-gray.svg";
 
+    likeIcon.addEventListener('click', () => {
+
+      if(likeIcon.classList.contains('LikeIcon--notLiked')) {
+
+        likeIcon.classList.add('LikeIcon--Liked')
+        likeIcon.classList.remove('LikeIcon--notLiked')
+        likeIcon.src = "./src/assets/img/heart-red.svg"
+
+        postsArray[i].likes++
+
+        likeCounter.innerText = postsArray[i].likes;
+
+      } else if(likeIcon.classList.contains('LikeIcon--Liked')) {
+
+        likeIcon.classList.add('LikeIcon--notLiked')
+        likeIcon.classList.remove('LikeIcon--Liked')
+        likeIcon.src = "./src/assets/img/heart-gray.svg"
+
+        postsArray[i].likes--
+
+        likeCounter.innerText = postsArray[i].likes;
+      }
+    })
+
     const likeCounter = document.createElement("small");
     likeCounter.classList.add("userPost__likeCounter");
     likeCounter.innerText = postsArray[i].likes;
@@ -138,8 +162,24 @@ function closeModal() {
   })
 }
 
+function followBtn() {
+  const followButtons = document.querySelectorAll('.suggestions__followBtn')
+
+  for(let i = 0; i < followButtons.length; i++) {
+    followButtons[i].addEventListener('click' , () => {
+      if(followButtons[i].classList.contains('suggestion--following')) {
+        followButtons[i].classList.remove('suggestion--following')
+        followButtons[i].innerText = 'Seguir'
+      } else {
+        followButtons[i].classList.add('suggestion--following')
+        followButtons[i].innerText = 'Seguindo'
+      }
+    })
+  }
+}
+
 
 renderPosts(posts);
 handlePostModal(posts)
-
+followBtn()
 
