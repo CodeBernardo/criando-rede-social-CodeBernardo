@@ -164,6 +164,10 @@ main {
   align-items: center;
 }
 
+.feed__title {
+  margin-bottom: 3.125rem;
+}
+
 .feed__container {
   width: 60%;
 

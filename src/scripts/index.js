@@ -1,4 +1,4 @@
-import { posts } from "./database.js";
+import { posts, users } from "./database.js";
 
 function createPostHeader(postInfo) {
   const userCardContainer = createDiv("userCard__container");
@@ -163,14 +163,20 @@ function closeModal() {
 }
 
 function followBtn() {
+  
   const followButtons = document.querySelectorAll('.suggestions__followBtn')
 
   for(let i = 0; i < followButtons.length; i++) {
-    followButtons[i].addEventListener('click' , () => {
-      if(followButtons[i].classList.contains('suggestion--following')) {
+    followButtons[i].addEventListener('click' , (event) => {
+
+      event.stopPropagation()
+
+      if(followButtons[i].classList.contains('suggestion--following')) 
+      {
         followButtons[i].classList.remove('suggestion--following')
         followButtons[i].innerText = 'Seguir'
-      } else {
+      } else 
+      {
         followButtons[i].classList.add('suggestion--following')
         followButtons[i].innerText = 'Seguindo'
       }
@@ -178,8 +184,52 @@ function followBtn() {
   }
 }
 
+function newPost() {
+  const buttonSubmit = document.querySelector('.newPost__btnSubmit')
+
+  buttonSubmit.addEventListener('click', (evt) => {
+
+    let reloadPosts = posts
+
+    const inputTitle = document.querySelector('.newPost__tittle')
+    const inputContent = document.querySelector('.newPost__content')
+
+    let postTitle = inputTitle.value
+    let postContent = inputContent.value
+
+    let newPost = {
+      id: '',
+      title: postTitle,
+      text: postContent,
+      user: users[0].user,
+      stack: users[0].stack,
+      img: users[0].img,
+      likes:0,
+    }
+
+    reloadPosts.unshift(newPost)
+
+    for(let i = 0; i < reloadPosts.length; i++) {
+      reloadPosts[i].id = [i]
+    }
+
+    const feedContainer = document.querySelector('.feed__container')
+    feedContainer.innerHTML = ''
+
+    renderPosts(reloadPosts)
+    handlePostModal(reloadPosts)
+
+    inputTitle.value = ''
+    inputContent.value = ''
+
+  console.log(evt)
+
+    evt.preventDefault()
+  })
+}
 
 renderPosts(posts);
 handlePostModal(posts)
 followBtn()
+newPost()
 
